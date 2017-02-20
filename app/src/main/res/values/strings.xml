@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SerialToolSample</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="uart_prompt">Select Uart</string>
+    <string name="baudrate_prompt">Select BaudRate</string>
+</resources>

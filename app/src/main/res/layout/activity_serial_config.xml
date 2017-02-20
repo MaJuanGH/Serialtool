@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/UartRx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="left"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="TTY Port Select" />
+
+        <RadioGroup
+            android:id="@id/radiogroup1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_x="3.0px"
+            android:checkedButton="@id/ttyS0"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@id/ttyS0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyS0" />
+
+            <RadioButton
+                android:id="@id/ttyS1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyS1" />
+
+            <RadioButton
+                android:id="@id/ttyS2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyS2" />
+
+            <RadioButton
+                android:id="@id/ttyS3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyS3" />
+
+            <RadioButton
+                android:id="@id/ttyS4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyS4" />
+
+            <RadioButton
+                android:id="@id/ttyUSB0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyUSB0" />
+
+            <RadioButton
+                android:id="@id/ttyUSB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyUSB1" />
+
+            <RadioButton
+                android:id="@id/ttyUSB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyUSB2" />
+
+            <RadioButton
+                android:id="@id/ttyUSB3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttyUSB3" />
+
+            <RadioButton
+                android:id="@id/ttySCA0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttySCA0" />
+
+            <RadioButton
+                android:id="@id/ttySCA1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttySCA1" />
+
+            <RadioButton
+                android:id="@id/ttySCA2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ttySCA2" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/UartRx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="left"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="Data bit Selsect" />
+
+        <RadioGroup
+            android:id="@id/DataBit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_x="3.0px"
+            android:checkedButton="@id/DataBit8"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@id/DataBit5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DataBit5" />
+
+            <RadioButton
+                android:id="@id/DataBit6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DataBit6" />
+
+            <RadioButton
+                android:id="@id/DataBit7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DataBit7" />
+
+            <RadioButton
+                android:id="@id/DataBit8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DataBit8" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@id/UartRx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:focusable="false"
+            android:gravity="left"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="StopBit Select" />
+
+        <RadioGroup
+            android:id="@id/StopBit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_x="3.0px"
+            android:checkedButton="@id/StopBit1"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@id/StopBit1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StopBit1" />
+
+            <RadioButton
+                android:id="@id/StopBit2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StopBit2" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@id/UartRx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:focusable="false"
+            android:gravity="left"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="Check bit Select" />
+
+        <RadioGroup
+            android:id="@id/CheckBit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_x="3.0px"
+            android:checkedButton="@id/CheckBitNONE"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@id/CheckBitNONE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NONE" />
+
+            <RadioButton
+                android:id="@id/CheckBitOdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Odd" />
+
+            <RadioButton
+                android:id="@id/CheckBitEven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Even" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/bd1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="Baud rate Select" />
+
+        <RadioGroup
+            android:id="@id/BaudRateSelect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_x="3.0px"
+            android:checkedButton="@id/BaudRate9600"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@id/BaudRate1200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1200" />
+
+            <RadioButton
+                android:id="@id/BaudRate2400"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2400" />
+
+            <RadioButton
+                android:id="@id/BaudRate4800"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4800" />
+
+            <RadioButton
+                android:id="@id/BaudRate9600"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9600" />
+
+            <RadioButton
+                android:id="@id/BaudRate19200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19200" />
+
+            <RadioButton
+                android:id="@id/BaudRate38400"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="38400" />
+
+            <RadioButton
+                android:id="@id/BaudRate57600"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="57600" />
+
+            <RadioButton
+                android:id="@id/BaudRate115200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="115200" />
+        </RadioGroup>
+
+        <Button
+            android:id="@id/serial_cfg_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="\n OK EXIT \n" />
+    </LinearLayout>
+</LinearLayout>
