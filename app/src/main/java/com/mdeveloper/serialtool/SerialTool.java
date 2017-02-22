@@ -9,7 +9,6 @@ import android.os.Message;
 import android.text.method.NumberKeyListener;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +22,7 @@ public class SerialTool extends Activity {
     private static final boolean DBGEN = true;
     Button BuardRate;
     final int ButtonClickMSG = 16;
-    serial COMX = new serial();
+    Serial COMX = new Serial();
     int COMX_fd = 0;
     ToggleButton CharDisplay;
     ToggleButton CharSend;
@@ -32,7 +31,7 @@ public class SerialTool extends Activity {
     Button DataBit;
     ToggleButton OpenUart;
     Button Send;
-    private String[] SerialCfg = {"ttyS1", "9600", "8", "1", "None"};
+    private String[] SerialCfg = {"ttyS3", "9600", "8", "1", "None"};
     Button StopBit;
     Button Tty;
     EditText UartRx;
@@ -51,7 +50,7 @@ public class SerialTool extends Activity {
     private String paramAnonymousMessage;
 
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("SerialPort");
     }
 
     private void DBG(String paramString) {
@@ -217,10 +216,11 @@ public class SerialTool extends Activity {
         }
 
         public void onClick(View paramView) {
+
             if (paramView == SerialTool.this.OpenUart) {
                 if (!SerialTool.this.OpenUart.isChecked()) {
-                    break label551;
-//                    label551();
+//                    break label551;
+                    label551();
                 }
                 SerialTool.this.COMX_fd = SerialTool.this.COMX.OpenPort(SerialTool.this.SerialCfg);
                 if (SerialTool.this.COMX_fd <= 0) {
@@ -247,16 +247,16 @@ public class SerialTool extends Activity {
                         }
                     });
                 }
-//                label221:
-//                if (paramView == SerialTool.this.CharDisplay) {
-//                    if (!SerialTool.this.CharDisplay.isChecked()) {
-////                        break label687;
-//                        label687();
-//                    }
-//                    new com.mdeveloper.serialtool.DataConvert();
-//                    str = "";
-//                    i = 0;
-//                }
+                label221:
+                if (paramView == SerialTool.this.CharDisplay) {
+                    if (!SerialTool.this.CharDisplay.isChecked()) {
+//                        break label687;
+                        label687();
+                    }
+                    new com.mdeveloper.serialtool.DataConvert();
+                    str = "";
+                    i = 0;
+                }
             }
             for (; ; ) {
                 if (i >= SerialTool.this.UartRxLenth) {
@@ -292,18 +292,18 @@ public class SerialTool extends Activity {
 //                    SerialTool.this.isStartReadThread = false;
 //                    SerialTool.this.COMX.Close();
 //                    break;
-                    label573:
-                    SerialTool.this.UartTxHex = SerialTool.this.UartTx.getText().toString();
-                    SerialTool.this.UartTx.setText(SerialTool.this.UartTxChar);
-                    SerialTool.this.UartTx.setKeyListener(new NumberKeyListener() {
-                        protected char[] getAcceptedChars() {
-                            return null;
-                        }
-
-                        public int getInputType() {
-                            return 1;
-                        }
-                    });
+//                    label573:
+//                    SerialTool.this.UartTxHex = SerialTool.this.UartTx.getText().toString();
+//                    SerialTool.this.UartTx.setText(SerialTool.this.UartTxChar);
+//                    SerialTool.this.UartTx.setKeyListener(new NumberKeyListener() {
+//                        protected char[] getAcceptedChars() {
+//                            return null;
+//                        }
+//
+//                        public int getInputType() {
+//                            return 1;
+//                        }
+//                    });
 //                    break label221;
                 }
                 str = str + Integer.toHexString(SerialTool.this.UartRxBuf[i] & 0xFF | 0x100).substring(1) + " ";
@@ -326,7 +326,7 @@ public class SerialTool extends Activity {
         SerialTool.this.COMX.Close();
     }
 
-    public void label573(){
+    public void 7label573(){
         SerialTool.this.UartTxHex = SerialTool.this.UartTx.getText().toString();
         SerialTool.this.UartTx.setText(SerialTool.this.UartTxChar);
         SerialTool.this.UartTx.setKeyListener(new NumberKeyListener() {
